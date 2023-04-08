@@ -8,7 +8,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "release": "changeset publish",
+    "lint": "eslint --ignore-path .gitignore ./src && prettier --check ./src",
+    "lint:fix": "eslint --ignore-path .gitignore ./src --fix",
+    "format": "prettier --write ./src",
+    "update": "pnpm update -i -L -r"
   },
   "devDependencies": {
     "eslint": "^8.37.0",
