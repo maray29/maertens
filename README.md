@@ -1,10 +1,10 @@
 # Studio Maertens Project Page Rebuild
 
-Project page from [studiomaertens](https://studiomaertens.com/project/orb1) for educational purposes.
+Project page from [Studio Maertens](https://studiomaertens.com/project/orb1) rebuilt for educational purposes.
 
 ## Features
 
-Built with Webflow, CurtainsJS, GSAP, WebGL.
+Built with Webflow, CurtainsJS, GSAP, SplitType.
 
 ## Installation
 
@@ -16,7 +16,7 @@ Compile the code and start a local server:
 
 `pnpm dev`
 
-To use with Webflow add the following script before </body>:
+To use with Webflow add the following script before `</body>`:
 
 `<script type="module" src="http://127.0.0.1:5173/src/main.js"></script>`
 
