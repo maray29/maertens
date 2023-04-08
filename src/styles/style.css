@@ -1,0 +1,440 @@
+@media screen {
+  html {
+    font-size: 12.7639px;
+  }
+
+  html,
+  body {
+    min-height: 100%;
+  }
+
+  body {
+    margin: 0;
+    font-size: 18px;
+    font-family: PPGoshaSansRegular, sans-serif;
+    background: #131313;
+    color: #fff;
+    line-height: 1.4;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+
+  a,
+  abbr,
+  acronym,
+  address,
+  applet,
+  article,
+  aside,
+  audio,
+  b,
+  big,
+  blockquote,
+  body,
+  canvas,
+  caption,
+  center,
+  cite,
+  code,
+  dd,
+  del,
+  details,
+  dfn,
+  div,
+  dl,
+  dt,
+  em,
+  embed,
+  fieldset,
+  figcaption,
+  figure,
+  footer,
+  form,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  header,
+  hgroup,
+  html,
+  i,
+  iframe,
+  img,
+  ins,
+  kbd,
+  label,
+  legend,
+  li,
+  mark,
+  menu,
+  nav,
+  object,
+  ol,
+  output,
+  p,
+  pre,
+  q,
+  ruby,
+  s,
+  samp,
+  section,
+  small,
+  span,
+  strike,
+  strong,
+  sub,
+  summary,
+  sup,
+  table,
+  tbody,
+  td,
+  tfoot,
+  th,
+  thead,
+  time,
+  tr,
+  tt,
+  u,
+  ul,
+  var,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+    font-size: inherit;
+  }
+
+  /*** Nav ***/
+  nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    width: 100%;
+    font: 1rem/1.1 PPGoshaSansRegular, sans-serif;
+    padding-top: 4rem;
+    max-width: 110rem;
+    margin: auto;
+  }
+
+  .nav_wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav_logo {
+    font: 2rem/1.1 PPHattonMedium, sans-serif;
+  }
+
+  .nav_links-wrap {
+    display: flex;
+    column-gap: 15rem;
+  }
+
+  .wheel_icon {
+    position: fixed;
+    z-index: 999;
+    left: 5rem;
+    bottom: 5rem;
+    width: 10rem;
+    height: 10rem;
+  }
+
+  /*** layout ***/
+
+  .flex-wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flexbox;
+    display: -moz-flex;
+    display: -o-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  /*** canvas ***/
+
+  /* our canvas will be a bit taller than our window to avoid "glitched" top and bottom edges */
+  #canvas {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+  }
+
+  .planes-loaded #canvas {
+    opacity: 1;
+  }
+
+  /*** content ***/
+
+  .h1-wrapper {
+    overflow: hidden;
+  }
+
+  .project {
+    padding: 15rem 0 85vh;
+    /* left: 0px;
+    pointer-events: none;
+    position: fixed;
+    top: 0px; */
+    width: 100%;
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 1;
+    visibility: inherit;
+  }
+
+  .project__information {
+    display: flex;
+    height: 45rem;
+    margin-top: 6rem;
+    position: relative;
+  }
+
+  .project__information__column:first-child {
+    width: calc(100% - 64rem);
+  }
+
+  .project__information__link {
+    display: inline-block;
+    font-size: 2.5rem;
+    font: 2.5rem/1.1 PPGoshaSansRegular, sans-serif;
+    margin-left: 11.5rem;
+    margin-top: 9rem;
+    text-transform: uppercase;
+  }
+
+  [data-animation='paragraph'] span {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+
+    font-kerning: none;
+  }
+
+  .project__media {
+    height: 88.3rem;
+    margin: 0 auto -60.5rem;
+    position: relative;
+    max-width: 80rem;
+  }
+
+  @font-face {
+    font-family: PPHattonMedium;
+    src: url(../fonts/PPHatton-Medium.otf);
+  }
+
+  @font-face {
+    font-family: PPGoshaSansRegular;
+    src: url(../fonts/PPGoshaSans-Regular.otf);
+  }
+
+  @font-face {
+    font-family: PPGoshaSansBold;
+    src: url(../fonts/PPGoshaSans-Bold.otf);
+  }
+
+  .project__title {
+    font: 12rem/1.1 PPHattonMedium, serif;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 9999;
+  }
+
+  .project__media__image {
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .project__gallery {
+    margin-top: 20rem;
+  }
+
+  .project__gallery__media {
+    position: relative;
+    margin-top: 5rem;
+  }
+
+  .project__gallery__image {
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .about__wrapper,
+  .project__wrapper,
+  .terms__wrapper {
+    margin: auto;
+    max-width: 130rem;
+    width: 90%;
+  }
+
+  .project__information__price {
+    display: none;
+  }
+
+  .project__information__link-wrap {
+    overflow: hidden;
+  }
+
+  .project__information__link {
+    display: inline-block;
+    font-size: 2.5rem;
+    margin-left: 11.5rem;
+    margin-top: 9rem;
+    text-transform: uppercase;
+  }
+
+  .project__information__toggle {
+    display: none;
+  }
+
+  .project__information__item {
+    display: flex;
+  }
+
+  .project__information__title {
+    width: 32rem;
+  }
+
+  .project__information__description {
+    width: 32rem;
+  }
+
+  .project__information__column:last-child {
+    width: 64rem;
+  }
+
+  .project__information__item:not(:first-child) {
+    margin-top: 1rem;
+  }
+
+  img {
+    max-width: 100%;
+    vertical-align: middle;
+  }
+
+  a,
+  button {
+    color: inherit;
+    /* cursor: none; */
+    outline: none;
+    pointer-events: auto;
+  }
+
+  .home,
+  .home__button__progress,
+  .home__wrapper,
+  .menu,
+  .menu__background,
+  .navigation,
+  .navigation__list,
+  .order,
+  .order__feedback,
+  .order__fields,
+  .preloader,
+  .project__gallery__image,
+  .project__media__image,
+  .wheel__arrows,
+  .work,
+  .work__titles {
+    height: 100%;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .about__section__description,
+  .about__section__title,
+  .about__terms,
+  .order__fields__description,
+  .project__information__description,
+  .project__information__title,
+  .terms__description {
+    font: 1.8rem/1.33 Neue Machina, sans-serif;
+  }
+
+  /*** handling errors ***/
+
+  .no-curtains .plane-title {
+    z-index: 1;
+  }
+
+  .no-curtains .plane {
+    display: flex;
+    overflow: hidden;
+  }
+
+  .no-curtains .plane img {
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  #content {
+    margin: 0 20px;
+  }
+
+  .plane-wrapper {
+    width: 87.5%;
+    height: 60vh;
+    margin: 10vh 12.5% 10vh 0;
+  }
+
+  .plane-wrapper:nth-child(even) {
+    margin: 10vh 0 10vh 12.5%;
+  }
+
+  .plane-wrapper:last-child {
+    margin-bottom: 20vh;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #content {
+    margin: 0 10px;
+  }
+
+  .plane-wrapper {
+    height: 75vh;
+    margin: 7.5vh auto;
+  }
+
+  .plane-wrapper:nth-child(even) {
+    margin: 7.5vh auto;
+  }
+
+  .plane-wrapper:last-child {
+    margin-bottom: 12.5vh;
+  }
+}
