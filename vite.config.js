@@ -28,5 +28,6 @@ export default defineConfig({
       },
       external: ['jquery'],
     },
+    outDir: 'dist',
   },
 })

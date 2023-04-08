@@ -41,8 +41,7 @@ maertens_source/
 .env
 
 # Production files
-dist
-dist-ssr
+# dist
 
 # Files not ready for production
 ./src/shaders/vertexShader2.glsl
