@@ -48,7 +48,7 @@ class App {
     return new Promise((resolve) => {
       this.animationState.pageLoaderTimeline = gsap.timeline()
 
-      // page loading
+      // page loading animation
       this.animationState.pageLoaderTimeline.set(this.DOM.wheelWrapper, {
         xPercent: -50,
         yPercent: -50,
