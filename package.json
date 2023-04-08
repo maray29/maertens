@@ -1,7 +1,7 @@
 {
   "name": "@maray-ai/maertens",
   "private": false,
-  "version": "1.1.0",
+  "version": "1.2.0",
   "type": "module",
   "author": "maray29 <ayk@maray.ai>",
   "license": "MIT",
