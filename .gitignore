@@ -41,7 +41,7 @@ maertens_source/
 .env
 
 # Production files
-dist/
+dist
 dist-ssr
 
 # Files not ready for production

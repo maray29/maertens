@@ -2,6 +2,12 @@
 
 Project page from [Studio Maertens](https://studiomaertens.com/project/orb1) rebuilt for educational purposes.
 
+![Example Image](./src/images/maertens-cover.png)
+
+[Article on maray.ai](https://maray.ai/)
+
+[Demo]()
+
 ## Features
 
 Built with Webflow, CurtainsJS, GSAP, SplitType.
