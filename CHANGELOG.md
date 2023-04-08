@@ -4,6 +4,12 @@
 
 ### Minor Changes
 
+- c28928e: Changed package to public.
+
+## 1.1.0
+
+### Minor Changes
+
 - b17a83e: Added pnpm scripts.
 
 ## 1.0.0
