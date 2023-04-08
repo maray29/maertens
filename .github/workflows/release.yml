@@ -1,14 +1,10 @@
 name: Release
 
 on:
-  workflow_call:
-    inputs:
-      staging-branch:
-        required: false
-        type: string
-    secrets:
-      NPM_TOKEN:
-        required: false
+  push:
+    branches:
+      - master
+      - main
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -39,16 +35,13 @@ jobs:
       - name: Build Project
         run: pnpm build
 
-      # If no NPM_TOKEN secret exists, just handle regular versioning
       - name: (No NPM) Create Release Pull Request
         uses: changesets/action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        if: ${{ env.NPM_TOKEN == null && inputs.staging-branch != github.ref_name }}
+        if: ${{ env.NPM_TOKEN == null }}
 
-      # If NPM_TOKEN secret exists, release to npm
-      # First, create a .npmrc file to make sure we're respecting the existing ones
       - name: Create .npmrc
         run: |
           cat << EOF > "$HOME/.npmrc"
@@ -58,7 +51,6 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         if: env.NPM_TOKEN != null
 
-      # If the branch is the staging branch, deploy with specific version (requires defining a pnpm release:staging script that calls changeset version)
       - name: (Staging) Create Release Pull Request and Publish to npm
         id: changesets-staging
         uses: changesets/action@v1
@@ -68,9 +60,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        if: ${{ env.NPM_TOKEN != null && inputs.staging-branch == github.ref_name }}
+        if: ${{ env.NPM_TOKEN != null && github.ref_name == 'staging' }}
 
-      # If the branch is production, deploy as usual
       - name: (Production) Create Release Pull Request and Publish to npm
         id: changesets-production
         uses: changesets/action@v1
@@ -79,4 +70,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        if: ${{ env.NPM_TOKEN != null && inputs.staging-branch != github.ref_name }}
+        if: ${{ env.NPM_TOKEN != null && github.ref_name != 'staging' }}
