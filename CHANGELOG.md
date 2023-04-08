@@ -1,5 +1,11 @@
 # maertens
 
+## 1.1.0
+
+### Minor Changes
+
+- b17a83e: Added pnpm scripts.
+
 ## 1.0.0
 
 ### Major Changes
