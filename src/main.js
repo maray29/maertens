@@ -299,5 +299,5 @@ class App {
 
 window.addEventListener('load', () => {
   const app = new App()
-  console.log('Loaded')
+  // console.log('Loaded')
 })
