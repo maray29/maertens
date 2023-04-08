@@ -30,7 +30,7 @@ Deploy to npm with Github actions following [Finsweet guide](https://github.com/
 
 ## Credits
 
-Original design from [studiomaertens](https://studiomaertens.com/project/orb1).
+Original design from [Studio Maertens](https://studiomaertens.com/project/orb1).
 
 ## License
 
