@@ -54,7 +54,7 @@ class App {
         yPercent: -50,
         x: innerWidth / 2,
         y: innerHeight / 2,
-        scale: 1.4,
+        scale: 1.2,
       })
 
       this.animationState.pageLoaderTimeline.to(this.DOM.wheelWrapper, {
@@ -68,8 +68,8 @@ class App {
         yPercent: -100,
         x: 20,
         y: innerHeight - 20,
-        scale: 1,
-        duration: 1.25,
+        scale: 0.75,
+        duration: 1,
         onComplete: resolve,
       })
     })

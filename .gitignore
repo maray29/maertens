@@ -46,3 +46,4 @@ dist-ssr
 
 # Files not ready for production
 ./src/shaders/vertexShader2.glsl
+medias/

@@ -21,6 +21,7 @@
     "vite-plugin-glsl": "^1.1.2"
   },
   "dependencies": {
+    "@changesets/cli": "^2.26.1",
     "@studio-freight/lenis": "^1.0.1",
     "curtainsjs": "^8.1.4",
     "gsap": "^3.11.4",
