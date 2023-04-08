@@ -1,5 +1,11 @@
 # maertens
 
+## 1.2.1
+
+### Patch Changes
+
+- 163e6aa: Update
+
 ## 1.2.0
 
 ### Minor Changes
