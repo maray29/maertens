@@ -1,5 +1,0 @@
----
-'maertens': patch
----
-
-Fixed typo.
