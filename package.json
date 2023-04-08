@@ -1,6 +1,6 @@
 {
-  "name": "maertens",
-  "private": true,
+  "name": "@maray-ai/maertens",
+  "private": false,
   "version": "1.0.0",
   "type": "module",
   "author": "maray29 <ayk@maray.ai>",
