@@ -1,5 +1,11 @@
 # maertens
 
+## 1.2.0
+
+### Minor Changes
+
+- 8abf9f9: Update
+
 ## 1.1.0
 
 ### Minor Changes
