@@ -13,8 +13,8 @@ export default defineConfig({
         // chunkFileNames: 'assets/js/[name]-[hash].js',
         // entryFileNames: 'assets/js/[name]-[hash].js',
 
-        chunkFileNames: '[name]-[hash].js',
-        entryFileNames: '[name]-[hash].js',
+        chunkFileNames: '[name].js',
+        entryFileNames: '[name].js',
 
         assetFileNames: ({ name }) => {
           if (/\.(gif|jpe?g|png|svg)$/.test(name ?? '')) {
