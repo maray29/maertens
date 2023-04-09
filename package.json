@@ -11,7 +11,7 @@
     "url": "git+https://github.com/maray29/maertens.git"
   },
   "type": "module",
-  "main": "src/main.js",
+  "main": "dist/index.js",
   "module": "src/main.js",
   "files": [
     "dist"
