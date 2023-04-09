@@ -1,10 +1,21 @@
 {
   "name": "@maray-ai/maertens",
-  "private": false,
   "version": "1.2.0",
-  "type": "module",
-  "author": "maray29 <ayk@maray.ai>",
+  "description": "Project page from studiomaertens.com rebuilt for educational purposes.",
+  "homepage": "https://github.com/maray29/maertens#readme",
   "license": "MIT",
+  "keywords": [],
+  "author": "maray29 <ayk@maray.ai>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maray29/maertens.git"
+  },
+  "type": "module",
+  "main": "src/main.js",
+  "module": "src/main.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -16,21 +27,21 @@
     "update": "pnpm update -i -L -r"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.1",
     "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
+    "prettier": "^2.8.7",
     "vite": "^4.2.0",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-glsl": "^1.1.2"
   },
   "dependencies": {
-    "@changesets/cli": "^2.26.1",
     "@studio-freight/lenis": "^1.0.1",
     "curtainsjs": "^8.1.4",
     "gsap": "^3.11.4",
-    "prettier": "^2.8.7",
     "split-type": "^0.3.3"
   }
 }
