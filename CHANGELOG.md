@@ -1,5 +1,11 @@
 # maertens
 
+## 1.3.0
+
+### Minor Changes
+
+- ad05e70: Fixed production build issue.
+
 ## 1.2.1
 
 ### Patch Changes
