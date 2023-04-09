@@ -10,8 +10,11 @@ export default defineConfig({
     minify: isProd,
     rollupOptions: {
       output: {
-        chunkFileNames: 'assets/js/[name]-[hash].js',
-        entryFileNames: 'assets/js/[name]-[hash].js',
+        // chunkFileNames: 'assets/js/[name]-[hash].js',
+        // entryFileNames: 'assets/js/[name]-[hash].js',
+
+        chunkFileNames: '[name]-[hash].js',
+        entryFileNames: '[name]-[hash].js',
 
         assetFileNames: ({ name }) => {
           if (/\.(gif|jpe?g|png|svg)$/.test(name ?? '')) {
