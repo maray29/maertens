@@ -1,5 +1,11 @@
 # maertens
 
+## 1.3.1
+
+### Patch Changes
+
+- b17ccd7: Update.
+
 ## 1.3.0
 
 ### Minor Changes
